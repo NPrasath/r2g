@@ -1,0 +1,40 @@
+name: Build artifact
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-artifact-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish API artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Install .NET 10 SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore
+        run: dotnet restore R2G.Training.sln
+      - name: Build
+        run: dotnet build R2G.Training.sln --configuration Release --no-restore
+      - name: Publish API
+        run: dotnet publish src/R2G.Training.Api/R2G.Training.Api.csproj --configuration Release --no-build --output publish
+      - name: Upload app artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: r2g-training-api-${{ github.sha }}
+          path: publish/
+          if-no-files-found: error
+          retention-days: 14
