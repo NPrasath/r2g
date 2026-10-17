@@ -1,0 +1,51 @@
+name: Defect and fix verification
+description: Report a reproducible failure and retain independent retest evidence.
+title: "[Defect] "
+body:
+  - type: input
+    id: links
+    attributes:
+      label: Requirement, acceptance criterion, test ID, and related PR
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Candidate commit SHA and environment
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical - unsafe outcome or major access/data failure
+        - High - core workflow blocked or incorrect
+        - Medium - limited behavior failure
+        - Low - minor behavior or presentation issue
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Preconditions, synthetic inputs, and reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Expected result, actual result, and evidence
+      description: Cite the approved expected outcome and link logs/screenshots without secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: retest
+    attributes:
+      label: Fix and independent retest record
+      value: |
+        Status: Open - verification pending
+        Fix PR/commit: Not recorded
+        Tester/date/environment: Not recorded
+        Failed case retest result/evidence: NotRun
+        Affected regression results/evidence: NotRun
+        Closure decision: Not recorded

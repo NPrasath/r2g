@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+TestResults/
+artifacts/
+__pycache__/
+*.pyc
+.vs/
+.vscode/
+*.user
+*.suo
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+*.log
+*.zip
+~$*

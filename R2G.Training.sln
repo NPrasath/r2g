@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11206.111 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R2G.Training.Api", "src\R2G.Training.Api\R2G.Training.Api.csproj", "{87C1202A-A746-4EB4-91DB-E23ACD899AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R2G.Training.Api.Tests", "tests\R2G.Training.Api.Tests\R2G.Training.Api.Tests.csproj", "{B7F58728-3679-4352-8931-E4567732CFC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87C1202A-A746-4EB4-91DB-E23ACD899AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C1202A-A746-4EB4-91DB-E23ACD899AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C1202A-A746-4EB4-91DB-E23ACD899AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C1202A-A746-4EB4-91DB-E23ACD899AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F58728-3679-4352-8931-E4567732CFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F58728-3679-4352-8931-E4567732CFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F58728-3679-4352-8931-E4567732CFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F58728-3679-4352-8931-E4567732CFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

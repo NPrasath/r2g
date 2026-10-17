@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Proposed cohort issue backlog. Keys are training IDs, not GitHub issue numbers. Human role assignments and decisions remain to be recorded.",
+  "issues": [
+    {
+      "id": "LAB-00",
+      "title": "[Training 00] Set up roles, GitHub, and the first real CI run",
+      "roleOwner": "Technical Manager",
+      "labPath": "training/labs/00-foundation.md",
+      "dependsOn": [],
+      "body": "Complete repository setup, name the BA, Developer, Tester/QA, and Technical Manager, inspect the actual CI run, confirm agent feature access, and establish Excel tracking. Record real evidence and missing dependencies. Completion: the cohort can create issues, branches, and PRs; CI results and access limits are understood.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-01",
+      "title": "[Training 01] Collect and approve the RQC business requirement",
+      "roleOwner": "Business Analyst",
+      "labPath": "training/labs/01-requirements.md",
+      "dependsOn": [
+        "LAB-00"
+      ],
+      "body": "Interview the assigned process owner with the Tester. Resolve the material decisions in REQ-RQC-001, draft measurable acceptance criteria, and publish the requirement with a real human approval/version when given. Completion: the agreed first task has clear behavior and a QA testability assessment. Do not invent plant rules or approval.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-02",
+      "title": "[Training 02] Agree a design and bounded implementation issues",
+      "roleOwner": "Developer + Technical Manager",
+      "labPath": "training/labs/02-design-and-tasks.md",
+      "dependsOn": [
+        "LAB-01"
+      ],
+      "body": "Use the approved requirement to propose the smallest implementation, record its design/limits, identify authorization/audit and consistency needs, and create linked tasks. The Technical Manager records the actual approach decision. Completion: one task meets the Ready conditions and names its dependencies and tests.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-03",
+      "title": "[Training 03] Design acceptance and regression tests with QA",
+      "roleOwner": "Tester / QA",
+      "labPath": "training/labs/03-test-design.md",
+      "dependsOn": [
+        "LAB-01",
+        "LAB-02"
+      ],
+      "body": "Draft requirement-linked test cases and synthetic data for the agreed scope, including boundary, repeated/invalid input, access, failure, and concurrency cases where relevant. Confirm business expectations with the BA. Completion: a reviewed test plan with NotRun/Blocked states; no fabricated passes.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-04",
+      "title": "[Training 04] Implement one ready RQC task with Copilot",
+      "roleOwner": "Developer",
+      "labPath": "training/labs/04-implementation.md",
+      "dependsOn": [
+        "LAB-02",
+        "LAB-03"
+      ],
+      "body": "Give the Implementation Developer profile a ready task, approved requirement, accepted design, criteria/tests, and bounded scope. Inspect the diff, add relevant tests, run real checks, and open a draft PR. Completion: reviewable implementation and actual developer evidence, with remaining QA/UAT tasks visible.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-05",
+      "title": "[Training 05] Review, execute QA, and verify any fixes",
+      "roleOwner": "Tester / QA + Technical Manager",
+      "labPath": "training/labs/05-review-and-qa.md",
+      "dependsOn": [
+        "LAB-04"
+      ],
+      "body": "Review the candidate independently, execute planned QA cases, report actual defects, and verify fixes with regression evidence on the fixing commit. Keep hypothetical exercises labeled. Completion: final review/QA assessment, defect/retest links where applicable, and explicit missing checks.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-06",
+      "title": "[Training 06] Perform UAT and decide a training release",
+      "roleOwner": "Business Analyst + Technical Manager",
+      "labPath": "training/labs/06-uat-and-release.md",
+      "dependsOn": [
+        "LAB-05"
+      ],
+      "body": "The BA performs UAT on a named tested candidate; the Technical Manager assesses review, QA, open defects, and rollback evidence. Complete the release checklist and create a training release only after the actual human decision. Completion: traceable acceptance/release evidence or a clearly recorded blocking decision.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    },
+    {
+      "id": "LAB-07",
+      "title": "[Training 07] Evaluate AI effort and improve one skill",
+      "roleOwner": "All roles",
+      "labPath": "training/labs/07-ai-evaluation.md",
+      "dependsOn": [
+        "LAB-06"
+      ],
+      "body": "Collect actual task effort across roles and quality evidence. Compare only comparable measured baselines; leave unsupported savings blank. Improve one agent instruction or skill through a reviewed PR and evaluate it on a fresh task. Completion: evidence-backed retrospective and next cohort role rotation.",
+      "recordStatus": "Proposed issue; not created or assigned"
+    }
+  ]
+}

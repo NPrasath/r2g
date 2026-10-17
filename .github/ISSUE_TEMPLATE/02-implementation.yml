@@ -1,0 +1,44 @@
+name: Implementation task
+description: Define a bounded change linked to an approved requirement.
+title: "[Implementation] "
+body:
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement issue URL and approved version
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Resulting behavior and scope boundaries
+      description: Include acceptance IDs, expected components, and work explicitly deferred.
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Technical approach and dependencies
+      description: Include validation, authorization/audit, data/transaction/concurrency effects where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Developer tests, independent QA, and rollback plan
+      description: Link test IDs and required environments; list unavailable dependencies.
+    validations:
+      required: true
+  - type: textarea
+    id: ready
+    attributes:
+      label: Readiness and human decisions
+      value: |
+        Status: Needs clarification
+        Business approval/version: Not recorded
+        QA testability/test plan: Not recorded
+        Technical Manager approach decision: Not recorded
+        Dependencies/blockers and owners: Not recorded
+        Completion criteria: Not recorded
+    validations:
+      required: true

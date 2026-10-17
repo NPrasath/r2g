@@ -1,0 +1,52 @@
+name: Business requirement
+description: Collect, clarify, and approve a business requirement before implementation.
+title: "[Requirement] "
+body:
+  - type: input
+    id: requirement_id
+    attributes:
+      label: Requirement ID
+      placeholder: REQ-RQC-001
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: User, problem, and desired outcome
+      description: Include the source/process owner and the affected workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: Business rules, normal flow, and exceptions
+      description: Distinguish agreed facts from proposals. Include permissions and audit needs.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria with IDs
+      description: State observable expected results; ask QA to review testability.
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Open questions, scope boundaries, and dependencies
+      description: Give each material question a human owner. Unresolved rules block Ready.
+    validations:
+      required: true
+  - type: textarea
+    id: approval
+    attributes:
+      label: Status and human approval record
+      value: |
+        Status: Needs clarification
+        BA / process owner: Not recorded
+        Approved requirement version/date: Not recorded
+        Business decision and evidence: Not recorded
+        QA testability assessment: Not recorded
+        Excel record / linked task URLs: Not recorded
+    validations:
+      required: true
